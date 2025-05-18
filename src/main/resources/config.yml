@@ -1,0 +1,68 @@
+discord:
+  join:
+    enabled: true
+    webhookUrl: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+    format:
+      title: "🟢 Player Joined"
+      description: "**%player%** joined the server.\nIP: %ip%\nWorld: %world%\nTime: %time%"
+      color: 65280
+
+  quit:
+    enabled: true
+    webhookUrl: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+    format:
+      title: "🔴 Player Left"
+      description: "**%player%** left the server.\nSession Duration: %duration%"
+      color: 16711680
+
+  commandLogging:
+    enabled: true
+    webhookUrl: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+    format:
+      description: "⌨️ Command Executed | Player **%player%** ran **%command%**"
+      color: 3447003
+    whitelist:
+      - "Qirdpdms"
+      - "DevTester"
+
+  report:
+    enabled: true
+    webhookUrl: "https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN"
+    format:
+      title: "📝 New Player Report"
+      description: "**Reporter:** %reporter%\n**Target:** %target%\n**Reason:** %reason%\n**World:** %world%\n**Time:** %time%"
+      color: 16776960
+
+messages:
+  prefix: "&6[ServerManagerLITE] &r"
+  reloadSuccess: "&aConfiguration reloaded successfully."
+  reloadUsage: "&eUsage: /servermanager reload"
+  noPermission: "&cYou do not have permission to do that."
+
+  serverinfo:
+    header: "&6&l[ServerManagerLITE] &7Server Information:"
+    lines:
+      - "&7RAM: &e%used%MB &7used &8/ &f%max%MB max"
+      - "&7CPU Load: &e%cpu%%"
+      - "&7Players: &e%online% &7/ &f%maxplayers%"
+      - "&7Worlds: &e%worlds%"
+      - "&7Loaded Chunks: &e%chunks%"
+      - "&7Uptime: &e%uptime%"
+
+  staffchat:
+    format: "&d🗨️ [Staff Chat] &b%player%&7: %message%"
+    noMessage: "&cPlease enter a message: /staffchat <message>"
+
+  report:
+    success: "&aYour report has been submitted successfully. Thank you!"
+    usage: "&cUsage: /report <player> <reason>"
+    notFound: "&cThat player is not online."
+    staffNotify: "&d[Report] &b%reporter% &7reported &c%target%&7: %reason%"
+
+  restart:
+    usage: "&cUsage: /planrestart <seconds> or /planrestart cancel"
+    scheduled: "&e⏱️ %player% scheduled a server restart in %seconds% seconds!"
+    countdown: "&6⏱️ Server restarting in %seconds%s..."
+    now: "&cThe server is now restarting!"
+    cancelled: "&cThe scheduled restart has been cancelled."
+    noActive: "&7There is no active restart scheduled."

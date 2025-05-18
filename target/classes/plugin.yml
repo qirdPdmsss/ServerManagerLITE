@@ -1,0 +1,32 @@
+name: ServerManagerLITE
+version: '1.0'
+main: de.qirdpdms.serverManagerLITE.Main
+api-version: '1.21'
+authors: [ qirdPdms ]
+website: https://discord.gg/9z7ghDRDWA
+
+commands:
+  serverinfo:
+    description: Zeigt Serverinformationen an
+    usage: /serverinfo
+    permission: servermanager.info
+
+  staffchat:
+    description: Teamchat für Moderatoren
+    usage: /staffchat <Nachricht>
+    permission: servermanager.staffchat
+
+  report:
+    description: Spieler melden
+    usage: /report <Spieler> <Grund>
+    permission: servermanager.report
+
+  servermanager:
+    description: Reload & Verwaltung
+    usage: /servermanager reload
+    permission: servermanager.reload
+
+  planrestart:
+    description: Plant oder bricht einen Serverneustart ab
+    usage: /planrestart <Sekunden> | cancel
+    permission: servermanager.restart
